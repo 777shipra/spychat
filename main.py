@@ -10,7 +10,7 @@ existing = raw_input(question)
 # validating users input
 if (existing == 'Y' or existing == 'y') :
     # logic here.
-    start_chat(spy)
+    start_chat(spy['name'], spy['age'], spy['rating'], spy['is_online'])
 elif (existing == 'N' or existing == 'n'):
     # new users code here.
     spy['name'] = raw_input("Provide your name here :")
@@ -59,7 +59,7 @@ if len(spy['name']) > 0:
         print "Authentication complete. Welcome " + spy['name'] + " age: " + str(spy['age']) + " and rating of: " + str(
             spy['rating']) + " Proud to have you onboard"
 
-        start_chat(spy)
+        start_chat(spy['name'], spy['age'], spy['rating'], spy['is_online'])
     else:
         print 'Sorry you are not of the correct age to be a spy'
 

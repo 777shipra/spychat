@@ -29,11 +29,15 @@ if len(spy['name']) > 0:
 
 
     # Let's create some new variables
+    while True:
+        try:
+            spy['age'] = raw_input("What is your age?")
+            break
+
+        except ValueError:
+            print "Invalid age and Try Again"
 
 
-    spy['age'] = raw_input("What is your age?")
-
-    # Raw input always gives us a string
 
 
     # Age cannot be less than 12 and no spies greater than 50 are allowed to exist

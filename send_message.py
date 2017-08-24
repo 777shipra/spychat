@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from select_friend import select_friend
 from steganography.steganography import Steganography
 
@@ -15,7 +15,7 @@ def send_message():
 
     # Successful message
     print "Your message encrypted successfully."
-=======
+
 from select_friend import select_friend
 from steganography.steganography import Steganography
 
@@ -32,4 +32,4 @@ def send_message():
 
     # Successful message
     print "Your message encrypted successfully."
->>>>>>> d410c3ac9eb01e3cf7d066617243c76b57647683
+

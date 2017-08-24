@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from globals import friends
 
 def select_friend():
@@ -8,7 +8,7 @@ def select_friend():
         counter = counter + 1
 
     result = int(raw_input("Select from the list : "))
-=======
+
 from globals import friends
 
 def select_friend():
@@ -18,5 +18,5 @@ def select_friend():
         counter = counter + 1
 
     result = int(raw_input("Select from the list : "))
->>>>>>> d410c3ac9eb01e3cf7d066617243c76b57647683
+
     return result - 1

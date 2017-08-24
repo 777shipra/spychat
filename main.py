@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # import statements
 from spy_details import spy
 from start_chat import  start_chat
@@ -73,7 +72,7 @@ else:
 
     print "A spy needs to have a valid name. Try again please."
 
-=======
+
 # import statements
 from spy_details import spy
 from start_chat import  start_chat
@@ -144,4 +143,4 @@ else:
 
     print "A spy needs to have a valid name. Try again please."
 
->>>>>>> d410c3ac9eb01e3cf7d066617243c76b57647683
+

@@ -4,6 +4,7 @@ from add_status import add_status
 from add_friend import add_friend
 from send_message import send_message
 from read_message import read_message
+from read_chat import read_chat
 
 # start_chat() function definition.
 def start_chat(name, age, rating, status):
@@ -45,8 +46,11 @@ def start_chat(name, age, rating, status):
                 send_message()
             elif (result == 4):
                 read_message()
+            elif (result == 5):
+                read_chat()
             elif (result == 6):
                 # close application
-                show_menu = False
+                print"bye-bye"
+                exit()
             else:
                 print "wrong choice try again."

@@ -8,3 +8,12 @@ STATUS_MESSAGES = ['My name is Bond, James Bond', 'Shaken, not stirred.', 'Keepi
 
 # lists to store users friends information.
 friends = []
+
+new_friend = {
+    'name': '',
+    'salutation': '.',
+    'age': 0,
+    'rating': 0.0,
+    'is_online': False,
+    'chats': []
+}

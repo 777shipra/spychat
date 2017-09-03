@@ -12,18 +12,21 @@ def send_message():
     original_image = raw_input("Provide the name of the image to hide the message : ")
     output_image = raw_input("Provide the name of the output image  : ")
     text = raw_input("Enter your message here : ")
-    # Encrypt the message
-    Steganography.encode(original_image, output_image, text)
+    if len(text)==0 :
+        print "<---NO MESSAGE,TRY AGAIN & WRITE SOMETHING--->"
+    else:
+        # Encrypt the message
+        Steganography.encode(original_image, output_image, text)
 
-    # Successful message
-    print "Your message encrypted successfully."
+        # Successful message
+        print "Your message encrypted successfully."
 
-    #save chats
-    new_chat={
-        'message': text ,
-        'date': datetime.now(),
-        'send_be_me':True
+        #save chats
+        new_chat={
+            'message': text ,
+            'date': datetime.now(),
+            'send_be_me':True
 
-    }
-    friends[friend_choice]['chats'].append(new_chat)
-    print "your secret message is ready"
+        }
+        friends[friend_choice]['chats'].append(new_chat)
+        print "your secret message is ready"

@@ -1,9 +1,10 @@
 # import statements
 from spy_details import spy
 from start_chat import  start_chat
+from termcolor import colored,cprint
 
 
-print "Let's get started!"
+cprint ("Let's get started!","green")
 question = "Do you want to continue as " + spy['salutation'] + " " + spy['name'] + " (Y/N): "
 existing = raw_input(question)
 

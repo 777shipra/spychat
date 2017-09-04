@@ -23,10 +23,12 @@ def send_message():
 
         #save chats
         new_chat={
-            'message': text ,
-            'date': datetime.now(),
+            'message': [] ,
+            'date': [],
             'send_be_me':True
 
         }
+        new_chat['message'].append(text)
+        new_chat['date'].append(datetime.now())
         friends[friend_choice]['chats'].append(new_chat)
         print "your secret message is ready"

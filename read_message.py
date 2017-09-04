@@ -12,11 +12,13 @@ def read_message():
     secret_message = Steganography.decode(encrypted_image)
     # save chats
     new_chat = {
-        'message': secret_message,
-        'date': datetime.now(),
+        'message': [],
+        'date': [],
         'send_be_me': False
 
     }
+    new_chat['message'].append(secret_message)
+    new_chat['date'].append(datetime.now())
     friends[sender]['chats'].append(new_chat)
     print "your secret message has been saved"
 

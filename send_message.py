@@ -1,4 +1,4 @@
-#import statements
+#<-------------import statements--------------->
 from select_friend import select_friend
 from steganography.steganography import Steganography
 from datetime import datetime
@@ -12,6 +12,7 @@ def send_message():
     original_image = raw_input("Provide the name of the image to hide the message : ")
     output_image = raw_input("Provide the name of the output image  : ")
     text = raw_input("Enter your message here : ")
+    #image that contain no secret message
     if len(text)==0 :
         print "<---NO MESSAGE,TRY AGAIN & WRITE SOMETHING--->"
     else:

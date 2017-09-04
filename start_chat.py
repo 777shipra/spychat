@@ -1,4 +1,4 @@
-# import statements
+# <-----------------import statements------------->
 #from globals import current_status_message
 from add_status import add_status
 from add_friend import add_friend

@@ -1,4 +1,4 @@
-from globals import friends
+from globals import friends#import statement
 #function to select friend from the list
 def select_friend():
     counter = 1

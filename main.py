@@ -1,4 +1,4 @@
-# import statements
+# <-------------------import statements-------------------->
 from spy_details import spy
 from start_chat import  start_chat
 from termcolor import colored,cprint
@@ -8,28 +8,28 @@ cprint ("Let's get started!","green")
 question = "Do you want to continue as " + spy['salutation'] + " " + spy['name'] + " (Y/N): "
 existing = raw_input(question)
 
-# validating users input
+# <------------------validating users input--------------------->
 if (existing == 'Y' or existing == 'y') :
     # logic here.
     start_chat(spy['name'], spy['age'], spy['rating'], spy['is_online'])
 elif (existing == 'N' or existing == 'n'):
-    # new users code here.
+    # <-----------------new users code here.---------------->
     spy['name'] = raw_input("Provide your name here :")
-    # chek wether spy has input something or not
+    # <------------chek wether spy has input something or not------------->
 if len(spy['name']) > 0:
 
-    # String Concatenation using + symbol
+    # <----------String Concatenation using + symbol----------->
     print 'Welcome ' + spy['name'] + '. Glad to have you back with us.'
 
     spy['salutation'] = raw_input("Should I call you Mister or Miss?: ")
 
-    # Variable has been updated
+    # <----------Variable has been updated--------->
     spy['name'] = spy['salutation'] + " " + spy['name']
 
     print "Alright " + spy['name'] + ". I'd like to know a little bit more about you before we proceed..."
 
 
-    # Let's create some new variables
+    #<------------- Let's create some new variables--------->
     while True:
         try:
             spy['age'] = raw_input("What is your age?")
@@ -42,7 +42,7 @@ if len(spy['name']) > 0:
 
 
     # Age cannot be less than 12 and no spies greater than 50 are allowed to exist
-    # Nested if
+    # <-------Nested if-------->
     if spy['age'] > 12 and spy['age'] < 50:
 
         spy['rating'] =float( raw_input("What is your spy rating?"))

@@ -8,7 +8,7 @@ STATUS_MESSAGES = ['My name is Bond, James Bond', 'Shaken, not stirred.', 'Keepi
 
 # lists to store users friends information.
 friends = []
-
+#<--------------dictionary to be appended in friends[]------------->
 new_friend = {
     'name': '',
     'salutation': '.',

@@ -1,4 +1,4 @@
-
+#<----------------import statements------------------->
 from select_friend import select_friend
 from steganography.steganography import Steganography
 from datetime import datetime
@@ -17,8 +17,8 @@ def read_message():
         'send_be_me': False
 
     }
-    new_chat['message'].append(secret_message)
-    new_chat['date'].append(datetime.now())
+    new_chat['message'].append(secret_message)#appending messages in message
+    new_chat['date'].append(datetime.now())#appending date and time in date
     friends[sender]['chats'].append(new_chat)
     print "your secret message has been saved"
 

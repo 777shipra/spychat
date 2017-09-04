@@ -1,4 +1,4 @@
-# import statements.
+#<----------- import statements.------------>
 from globals import friends
 from globals import new_friend
 # add new friends.

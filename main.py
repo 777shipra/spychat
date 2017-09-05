@@ -2,6 +2,7 @@ from spy_details import spy,Spy
 from start_chat import start_chat
 from termcolor import colored
 
+print colored("WELCOME TO SPYCHAT APPLICATION","cyan")
 question = "Do you want to continue as " + spy.salutation + " " + spy.name + " (Y/N): "
 existing = raw_input(question)
 

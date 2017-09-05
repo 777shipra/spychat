@@ -21,7 +21,7 @@ elif existing.upper() == "N":
     # Check if the name is entered or not
     if len(spy.name) > 0 and spy.name.isdigit() == False:
         # ask for the salutation
-        spy.salutation = raw_input("What should we call you Mr. or Ms.?")
+        spy.salutation = raw_input("What should we call you Mister or Miss?")
         # check if salutation is entered or not
         if len(spy.salutation) > 0:
 
@@ -34,7 +34,7 @@ elif existing.upper() == "N":
                 # Age cannot be less than 12 and greater than 50
                 # nested if
                 if 12 <= spy.age < 50:
-                    print("Welcome to Spy community")
+                    print("Welcome to SpyChat..!!!")
 
                     # Ask for spy_rating
                     spy.rating = raw_input("Please enter your spy rating: ")
@@ -43,14 +43,14 @@ elif existing.upper() == "N":
                         spy.rating = float(spy.rating)
 
                         # conditions to pass comments according to the spy_rating.
-                        if spy.rating > 4.5:
-                            print(colored("Great Ace!", 'blue'))
-                        elif 3.5 <= spy.rating <= 4.5:
-                            print(colored("You are one of the good ones!", 'blue'))
-                        elif 2.5 <= spy.rating <= 3.5:
-                            print(colored("You can always do better.", 'blue'))
+                        if spy.rating > 4.5:  # using if else condition to evaluate users rating
+                            print colored('Excellent!','green')
+                        elif spy.rating > 3.5 and spy.rating <= 4.5:
+                            print colored('You are one of the good ones.','green')
+                        elif spy.rating >= 2.5 and spy.rating <= 3.5:
+                            print colored('You can do better','green')
                         else:
-                            print(colored("We will get someone to help you.", 'red'))
+                            print colored('We can always use somebody to help in the office.','cyan')
 
                         # Make the spy come online
                         spy.is_online = True
@@ -87,5 +87,4 @@ elif existing.upper() == "N":
 
 else:
     print(colored("You did not reply with a yes(Y) or no(N)!", 'green'))
-    print(colored("Need to run the program again.", 'green'))
     exit()

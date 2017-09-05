@@ -1,14 +1,15 @@
+#<-----------------------IMPORT STATEMENTS---------------------->
 from select_friend import select_a_friend
 from spy_details import friends
 from send_message_help import send_message_help
 from spy_details import ChatMessage
 from termcolor import colored
-
-
+from steganography.steganography import Steganography
+#<------------------------FUNCTION TO READ A SECRET MESSAGE---------------------------------->
 def read_a_message():
     # Select a friend to communicate with
     sender = select_a_friend()
-    output_path = raw_input("What is the name of the image file?: ")
+    output_path = raw_input("Enter the name of the image file u want as output ?: ")
 
     # Error handling if a secret message is present or not
     try:
@@ -22,8 +23,8 @@ def read_a_message():
         # Maintain the average number of words spoken by a spy every time a message is received from a particular spy.
         friends[sender].count += len(words)
 
-        # Emergency words are present
-        if "SOS" in new or "SAVE" in new or "HELP" in new or "AID" in new or "ACCIDENT" in new or "RESCUE" in "ALERT" in new or "ALARM" in new or "CRISIS" in new:
+        #  Some Emergency words are present
+        if "SOS" in new or "SAVE" in new or "HELP" in new or "RESCUE" in  new:
 
             # Emergency alert
             print(colored("!", 'grey', 'on_yellow')),
@@ -31,14 +32,14 @@ def read_a_message():
             print(colored("!", 'grey', 'on_yellow'))
 
             # Help your friend by sending him a helping message
-            print (colored("The friend that sent this message needs an emergency.", 'green'))
-            print (colored("PLease help your friend by sending a helping message.", 'green'))
-            print (colored("Select that friend to send him a helping message.", 'red'))
+            print (colored("Your spy friend seems to be in an emergency..", 'red'))
+            print (colored("Send him a suitable message", 'red'))
+            print (colored("Select that friend to send him a helping message.", 'green'))
 
             # Calling the send message help function
             send_message_help()
             # The message is sent successfully
-            print(colored("You have sent a message to help your friend.", 'magenta'))
+            print(colored("You have sent a message to help your friend.", 'green'))
 
             # Adding the chat with the sender
             new_chat = ChatMessage(secret_text, False)
@@ -61,10 +62,9 @@ def read_a_message():
         if len(words) > 100:
             print(colored(friends[sender].name, 'blue')),
             print(colored("removed from friends list.What a chatter box!.What a drag!!!", "yellow"))
-            # Removes that chatterbox friend
+            # Removes that friend who talks too much
             friends.remove(friends[sender])
 
     # When the image contains no secret message
-    # 'TypeError' handling
     except TypeError:
         print(colored("Nothing to decode from the image as it contains no secret message.", 'red'))

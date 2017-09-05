@@ -20,7 +20,7 @@ def add_status():
     # .upper() converts from any case to upper case
     if default.upper() == "N":
         # ask the user to enter a new status
-        new_status_message = raw_input(colored("What status message do you want to see?: ", "magenta"))
+        new_status_message = raw_input(colored("What status message do you want to set?: ", "magenta"))
 
         # if valid status message is entered
         if len(new_status_message) > 0:
@@ -50,7 +50,7 @@ def add_status():
 
     # When the user chooses neither yes nor no
     else:
-        print 'The option you chose is not valid! Press either y or n.'
+        print (colored('The option you chose is not valid! Press either y or n.','red'))
 
     # When the status message is updated
     if updated_status_message:
@@ -59,7 +59,7 @@ def add_status():
 
     # When it is not updated
     else:
-        print(colored('You did not update your status message','magenta'))
+        print(colored('You did not update your status message','red'))
 
     # The updated message will be read
     return updated_status_message

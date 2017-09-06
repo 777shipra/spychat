@@ -22,7 +22,7 @@ elif existing.upper() == "N":
     # Check if the name is entered or not
     if len(spy.name) > 0 and spy.name.isdigit() == False:
         # ask for the salutation
-        spy.salutation = raw_input("What should we call you Mister or Miss?")
+        spy.salutation = raw_input("What should we call you Mr. or Ms.?")
         # check if salutation is entered or not
         if len(spy.salutation) > 0:
 
